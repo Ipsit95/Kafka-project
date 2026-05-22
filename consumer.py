@@ -21,11 +21,18 @@ from config import (
 )
 
 
-with open("queries.sql") as f:
-    INSERT_WIKIPEDIA = f.read()
+# Read SQL from queries.sql
+def load_sql_query(filename: str, marker: str) -> str:
+    with open(filename, "r") as f:
+        sql = f.read()
+    start = sql.find(marker + ' = """')
+    if start == -1:
+        raise ValueError(f"Marker {marker} not found in {filename}")
+    start = sql.find('"""', start) + 3
+    end = sql.find('"""', start)
+    return sql[start:end].strip()
 
-
-# INSERT_WIKIPEDIA = load_sql("queries.sql")
+INSERT_WIKIPEDIA = load_sql_query("queries.sql", "INSERT_WIKIPEDIA")
 
 logging.basicConfig(
     level=logging.INFO,
