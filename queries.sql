@@ -1,5 +1,4 @@
-INSERT_WIKIPEDIA = """
-INSERT INTO sample_first_schema.wikipedia_creats
+INSERT_WIKIPEDIA = """ INSERT INTO sample_first_schema.wikipedia_creats
     (event_id, wiki, title, editor, edit_type, is_bot,
      bytes_delta, comment, page_url, edit_ts)
 VALUES
