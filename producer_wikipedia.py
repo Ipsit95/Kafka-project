@@ -14,6 +14,7 @@ from config import (
     WIKIMEDIA_SSE_URL,
 )
 
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [WIKI-PRODUCER] %(levelname)s %(message)s",

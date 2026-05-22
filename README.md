@@ -54,7 +54,6 @@ Update `config.py` with your local PostgreSQL username and password.
 ```bash
 pip install -r requirements.txt
 ```
-
 ---
 
 ## Running the Pipeline

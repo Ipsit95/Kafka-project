@@ -74,6 +74,7 @@ def build_consumer() -> KafkaConsumer:
     )
 
 
+
 def run():
     log.info(
         "Consumer starting  topics=[%s, %s]  group='%s'",
